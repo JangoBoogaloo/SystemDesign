@@ -47,3 +47,16 @@ GET /{shortUrl} -> Redirect to longUrl
 <img width="1288" alt="Image" src="https://github.com/user-attachments/assets/8be89c30-3a0b-40b0-a482-b128cc1c1295" />
 
 # Deep Dive
+
+## Unique short URLs (5-7 characters, 1B)
+
+### base62 Hashing - 62^7 > 1B
+- hash URL
+- random number generator
+
+Require DB check to avoid collision.
+
+### Counter
+- Increment Counter
+
+#### Distribute Scale
