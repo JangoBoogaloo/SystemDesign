@@ -49,14 +49,18 @@ GET /{shortUrl} -> Redirect to longUrl
 # Deep Dive
 
 ## Unique short URLs (5-7 characters, 1B)
-
-### base62 Hashing - 62^7 > 1B
 - hash URL
 - random number generator
-
-Require DB check to avoid collision.
+- Require DB check to avoid collision.
 
 ### Counter
-- Increment Counter
+- Increment Counter -> base62 hashing
+- Predictable (security concern)
+- one to one bijection
 
 #### Distribute Scale
+- Redis global counter ??
+
+## Low Redirect Latency < 200ms
+- shortURL primary key
+- Redis in mem caching: LRU cache
