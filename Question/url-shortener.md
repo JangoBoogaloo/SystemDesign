@@ -44,6 +44,6 @@ GET /{shortUrl} -> Redirect to longUrl
 # Data Flow
 
 # High Level Design
-
+<img width="1288" alt="Image" src="https://github.com/user-attachments/assets/8be89c30-3a0b-40b0-a482-b128cc1c1295" />
 
 # Deep Dive
