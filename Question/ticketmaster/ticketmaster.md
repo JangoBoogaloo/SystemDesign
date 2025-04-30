@@ -19,23 +19,24 @@ Venue
 # API or System Interface
 
 ## View Event
+```HTTP
 GET events/{event-id} -> event & venue & performer & ticket[]
-
+```
 ## Search Event
+```HTTP
 GET events/search?term={term}&location={location}&type={type}&date={date} -> partial data of event
-
+```
 ## Book Ticket
+```HTTP
 POST ticket/reserve
-header JWT token | session token
-```JSON
+Header: JWT token | session token
 body: {
     ticketId
 }
 ```
-
+```HTTP
 POST ticket/confirm
-header JWT token | session token
-```JSON
+Header: JWT token | session token
 body: {
     ticketId,
     payment_detail
