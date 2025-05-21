@@ -11,6 +11,8 @@
 1. Avoid showing repeat profile
 
 ## Non Functional Requirements
+- Immediate match when 2 users like each other
+- Get relevant profiles with low latench (<100ms)
 
 ### Consistency 
 - for Swipes. Get most accurate write when read.
@@ -56,3 +58,10 @@ POST /swipes/:userId
 # High Level Design
 
 # Deep Dive
+
+## Immediate match when 2 users like each other
+
+## Get relevant profiles with low latench
+* What happens you change geo-location or other preference
+
+## No repeat profiles
